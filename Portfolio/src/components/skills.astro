@@ -7,10 +7,12 @@ const imgs: ImgType[] = [
   { src: "../../public/svg/file-type-html.svg", name: "html icon" },
   { src: "../../public/svg/css.svg", name: "css icon" },
   { src: "../../public/svg/javascript-js.svg", name: "javascript icon" },
-  { src: "../../public/svg/typescript-icon.svg", name: "typescript icon" },
+  { src: "../../public/svg/tailwind-css.svg", name: "tailwindcss icon" },
   { src: "../../public/svg/react.svg", name: "react icon" },
   { src: "../../public/svg/nextjs.svg", name: "nextjs icon" },
-  { src: "../../public/svg/tailwind-css.svg", name: "tailwindcss icon" },
+  { src: "../../public/svg/typescript-icon.svg", name: "typescript icon" },
+  { src: "../../public/svg/astro.svg", name: "astro" },
+  { src: "../../public/svg/solid.svg", name: "solid-js" },
 ];
 ---
 
@@ -25,7 +27,11 @@ const imgs: ImgType[] = [
       {
         imgs.map((img) => (
           <div>
-            <img src={img.src} alt={img.name} class="w-20 md:w-40 lg:w-52" />
+            <img
+              src={img.src}
+              alt={img.name}
+              class="w-20 md:w-40 lg:w-52 xl:w-64"
+            />
           </div>
         ))
       }

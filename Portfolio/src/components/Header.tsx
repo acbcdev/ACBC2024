@@ -82,7 +82,7 @@ export const Header = () => {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className=" text-white border-4 rounded-3xl border-transparent  hover:border-white px-3 py-2 text-sm font-medium"
+                  className=" text-white border-4 rounded-3xl border-transparent duration-200 hover:scale-105 hover:border-white px-3 py-2 text-sm font-medium"
                 >
                   {item.text}
                 </a>

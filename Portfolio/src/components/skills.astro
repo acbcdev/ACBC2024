@@ -11,8 +11,8 @@ const imgs: ImgType[] = [
   { src: "../../public/svg/react.svg", name: "react icon" },
   { src: "../../public/svg/nextjs.svg", name: "nextjs icon" },
   { src: "../../public/svg/typescript-icon.svg", name: "typescript icon" },
-  { src: "../../public/svg/astro.svg", name: "astro" },
-  { src: "../../public/svg/solid.svg", name: "solid-js" },
+  { src: "../../public/svg/astro_dark.svg", name: "astro" },
+  { src: "../../public/svg/solidjs.svg", name: "solid-js" },
 ];
 ---
 
@@ -26,13 +26,11 @@ const imgs: ImgType[] = [
     <div class="flex flex-wrap gap-5 items-center justify-center">
       {
         imgs.map((img) => (
-          <div>
-            <img
-              src={img.src}
-              alt={img.name}
-              class="w-20 md:w-40 lg:w-52 xl:w-64"
-            />
-          </div>
+          <img
+            src={img.src}
+            alt={img.name}
+            class="w-20 md:w-40 aspect-square lg:w-52 xl:w-64"
+          />
         ))
       }
     </div>

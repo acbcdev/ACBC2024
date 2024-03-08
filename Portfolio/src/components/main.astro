@@ -1,3 +1,7 @@
+---
+import GitHubSVG from '../svg/github.astro'//'@svg/github.astro'
+import LinkedinSVG from '../svg/linkedin.astro'
+---
 <section
   class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
 >
@@ -8,19 +12,15 @@
     <h4 class="text-white text-2xl text-center">Frontend Developer</h4>
     <div class="grid place-content-center grid-flow-col gap-4 p-5">
       <a
-        ><img
-          class="fill-white stroke-white stroge hover:text-[#171515] w-10 h-10 rounded-lg"
-          src="../../public/svg/github.svg"
-          alt="
-        "
-        /></a
+      
+        >
+        <GitHubSVG styles="w-10 fill-white h-10 duration-200 hover:fill-slate-500"/>
+        </a
       >
       <a
-        ><img
-          class="fill-white w-10 h-10 rounded-lg hover:fill-[#0e76a8]"
-          src="../../public/svg//bxl-linkedin-square.svg"
-          alt=""
-        /></a
+        ><LinkedinSVG
+        syles="fill-white w-10 h-10 rounded-lg duration-200 hover:fill-[#0A66C2]"/>
+        </a
       >
     </div>
   </div>

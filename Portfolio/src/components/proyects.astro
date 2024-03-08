@@ -1,5 +1,9 @@
 ---
-import { proyects } from "../data/dataProyects";
+//import { proyects } from "../data/dataProyects";
+import {getProjects} from '../utils/notion'
+
+const proyects = await getProjects()
+console.log(proyects)
 ---
 
 <section
@@ -16,21 +20,27 @@ import { proyects } from "../data/dataProyects";
             data-testid="card"
             class="rounded-3xl border-4 border-transparent hover:border-white md:border-8 bg-zinc-800 p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
           >
-            <a href={item.link} aria-label="link to project">
+            <a target="_blank" href={item.link} aria-label="link to project">
               <div class="relative flex items-end overflow-hidden rounded-xl">
                 <img
-                  alt="project image alt text"
+                  alt="project image"
                   width="400"
                   height="400"
+                  class="w-full h-full object-cover aspect-square"
                   src={item.img}
                   loading="eager"
                   decoding="async"
                 />
               </div>
               <div class="mt-1 p-2">
-                <h3 class="text-xl text-orange lg:text-2xl">{item.title}</h3>
+                <h3 class="text-xl text-orange lg:text-2xl">{item.name}</h3>
+                <p>
+                  
+                  {
+                    item.descripcion
+                  }</p>
                 <div class="mt-2 flex w-2/3 flex-row flex-wrap justify-between">
-                  {item.hash.map((hs) => (
+                  {item.tags.map((hs:string) => (
                     <span class="inline-block rounded py-2 text-xs text-black lg:py-1">
                       #{hs}
                     </span>

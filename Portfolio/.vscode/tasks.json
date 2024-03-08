@@ -5,7 +5,7 @@
       "type": "npm",
       "script": "dev",
       "runOptions": {
-      "runOn": "folderOpen"
+        "runOn": "folderOpen"
       }
     }
   ]

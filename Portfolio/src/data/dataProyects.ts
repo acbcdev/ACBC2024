@@ -1,21 +1,30 @@
 interface ProyectType {
   link: string;
+  github: string;
   img: string;
-  title: string;
-  hash: string[];
+  name: string;
+  tags: string[];
 }
 
 export const proyects: ProyectType[] = [
   {
+    github:'',
     link: "",
     img: "",
-    title: "Gif Finder",
-    hash: ["Nextjs", "React", "Tailwindcss"],
+    name: "Gif Finder",
+    tags: ["Nextjs", "React", "Tailwindcss"],
   },
   {
+    github:'',
     link: "",
     img: "",
-    title: "To Do",
-    hash: ["Nextjs", "React", "Tailwindcss"],
+    name: "To Do",
+    tags: ["Nextjs", "React", "Tailwindcss"],
   },
 ];
+/**
+ * linkDeploy
+ * 
+ *
+ * 
+ */

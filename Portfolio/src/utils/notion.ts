@@ -5,17 +5,15 @@ const linkdb = "f7c4bf0c9e044a14a22a0e0d21e94a74";
 const notion = new Client({
   auth: import.meta.env.NOTION_TOKEN,
 });
-// {
-//   github: {
-//     id: 'BW%3C%5D',
-//     type: 'url',
-//     url: 'https://github.com/ACBC-DEV/LinkMinify'
-//   },
-//   link: { id: 'VFVN', type: 'url', url: null },
-//   img: { id: 'uAyx', type: 'files', files: [] },
-//   tags: { id: 'x%3E%7Ch', type: 'multi_select', multi_select: [Array] },
-//   name: { id: 'title', type: 'title', title: [Array] }
-// },
+
+interface ProyectType {
+  link: string;
+  github: string;
+  img: string;
+  name: string;
+  tags: string[];
+}
+
 export const getProjects = async () => {
   const query = { database_id: linkdb };
   const { results } = await notion.databases.query(query);

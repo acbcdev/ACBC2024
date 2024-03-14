@@ -4,7 +4,6 @@ const dataHeader: dataH[] = [
   { text: "About me", id: "about" },
   { text: "Skills", id: "skills" },
   { text: "Proyects", id: "projects" },
-  { text: "Contact me", id: "contact" },
 ];
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

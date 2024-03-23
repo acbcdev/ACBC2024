@@ -3,7 +3,7 @@
 import {getProjects} from '../utils/notion'
 
 const proyects = await getProjects()
-console.log(proyects)
+// console.log(proyects)
 ---
 
 <section
@@ -46,18 +46,15 @@ console.log(proyects)
                       [
                         " rounded-3xl hover:scale-105 duration-300 text-black py-3 px-2  ",
                         {
-                          "bg-blue-500": tag === "React",
+                          "bg-blue-500": ['React', 'CSS','Tailwindcss'].includes(tag),
                           "bg-white": tag === "Nextjs",
                           "bg-green-500": ['mongodb', 'Node'].includes(tag),
-                          "bg-yellow-500": tag === "Astro",
-                          "bg-red-500": tag === "SolidJS",
-                          "bg-purple-500": tag === "Tailwindcss",
+                          "bg-red-500": tag === "Astro",
+                          "bg-slate-500": tag === "SolidJS",
                           "bg-indigo-500": tag === "TypeScript",
                           "bg-gray-500": tag === "JavaScript",
                           "bg-black-500": tag === "HTML",
-                          "bg-gray-700": tag === "CSS",
-                          //"bg-green-500": tag === "CSS",
-
+                          "bg-gray-700": tag === "CSS"
                         }
                       ]
                     } >
@@ -78,6 +75,6 @@ console.log(proyects)
   @apply rounded-3xl border-4 border-transparent hover:border-white md:border-8 bg-zinc-800 p-3 shadow-lg duration-200 hover:scale-105 hover:transform hover:shadow-xl
 }
 .card:hover a > div img {
-  @apply scale-105  
+  @apply scale-110  
 }
 </style>

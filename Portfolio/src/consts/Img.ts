@@ -2,7 +2,7 @@ interface ImgType {
   src: string;
   name: string;
 }
-export const imgs: ImgType[] = [
+export const SkillsICons: ImgType[] = [
   { src: "../../svg/file-type-html.svg", name: "html icon" },
   { src: "../../svg/css.svg", name: "css icon" },
   { src: "../../svg/javascript-js.svg", name: "javascript icon" },

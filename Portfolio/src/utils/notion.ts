@@ -1,6 +1,5 @@
 import { Client } from "@notionhq/client";
 
-const linkdb = "f7c4bf0c9e044a14a22a0e0d21e94a74";
 // Initializing a client
 const notion = new Client({
   auth: import.meta.env.NOTION_TOKEN,
@@ -15,7 +14,7 @@ interface ProyectType {
 }
 
 export const getProjects = async () => {
-  const query = { database_id: linkdb };
+  const query = { database_id: import.meta.env.NOTION_DATABASE_ID };
   const { results } = await notion.databases.query(query);
   return results.map((page) => {
     const { properties } = page;

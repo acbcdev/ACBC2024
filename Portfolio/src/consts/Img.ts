@@ -12,4 +12,5 @@ export const SkillsICons: ImgType[] = [
   { src: "/svg/typescript-icon.svg", name: "typescript icon" },
   { src: "/svg/astro_dark.svg", name: "astro" },
   { src: "/svg/solidjs.svg", name: "solid-js" },
+  { src: "/svg/bash_dark.svg", name: "bash" }
 ];

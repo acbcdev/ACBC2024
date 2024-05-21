@@ -2,59 +2,62 @@
 import type { ProyectType } from "@/types/proyects";
 import { proyects } from "@/consts/proyects";
 ---
+
 <section
   id="projects"
-  class="mb-28  flex flex-col items-center justify-center md:mb-0 md:h-screen"
+  class="mb-28 flex flex-col items-center justify-center md:mb-0 md:h-screen"
 >
-  <h2 class="font-monospace text-5xl mb-2 text-white ">Projects</h2>
+  <h2 class="font-monospace text-5xl mb-2 text-white">Projects</h2>
   <span class="mb-10 h-1 w-10 bg-white"></span>
-  <div class="mb-10 flex w-full flex-col  items-center md:flex-row">
+  <div class="mb-10 flex w-full flex-col items-center md:flex-row">
     {
-      proyects.map((item: ProyectType ) => (
+      proyects.map((item: ProyectType) => (
         <section class=" w-full p-4 md:w-1/2 lg:w-1/3 text-white">
-          <article
-            data-testid="card"
-            class="card"
-          >
-          <a  aria-label="link to project">
+          <article data-testid="card" class="card">
+            <a aria-label="link to project">
               <div class="relative flex items-end overflow-hidden rounded-xl">
-                <img
-                  alt={item?.descripcion}
-                  width="400"
-                  height="400"
-                  class="w-full h-full object-cover  aspect-square duration-200"
-                  src={item?.img}
-                  loading="eager"
-                  decoding="async"
-                />
+                <a target="_blank" href={item.link}>
+                  <img
+                    alt={item?.descripcion}
+                    width="400"
+                    height="400"
+                    class="w-full h-full object-cover  aspect-square duration-200"
+                    src={item?.img}
+                    loading="eager"
+                    decoding="async"
+                  />
+                </a>
               </div>
               <div class="mt-1 p-2">
                 <h3 class="text-xl text-orange lg:text-2xl">{item?.name}</h3>
-                <p>
-                  {item?.descripcion}
-                </p>
+                <p>{item?.descripcion}</p>
                 <div class="mt-2 flex  gap-2 flex-wrap justify-start">
-                  {item?.tags.map((tag:string) => {
+                  {item?.tags.map((tag: string) => {
                     return (
-                    <p class:list={
-                      [
-                        " rounded-3xl hover:scale-105 duration-200 text-black py-3 px-2  ",
-                        {
-                          "bg-blue-500": ['React', 'CSS','Tailwindcss'].includes(tag),
-                          "bg-white": tag === "Nextjs",
-                          "bg-green-500": ['mongodb', 'Node'].includes(tag),
-                          "bg-red-500": tag === "Astro",
-                          "bg-slate-500": tag === "SolidJS",
-                          "bg-indigo-500": tag === "TypeScript",
-                          "bg-gray-500": tag === "JavaScript",
-                          "bg-black-500": tag === "HTML",
-                          "bg-gray-700": tag === "CSS"
-                        }
-                      ]
-                    } >
-                      #{tag}
-                    </p>
-                  )})}
+                      <p
+                        class:list={[
+                          " rounded-3xl hover:scale-105 duration-200 text-black py-3 px-2  ",
+                          {
+                            "bg-blue-500": [
+                              "React",
+                              "CSS",
+                              "Tailwindcss",
+                            ].includes(tag),
+                            "bg-white": tag === "Nextjs",
+                            "bg-green-500": ["mongodb", "Node"].includes(tag),
+                            "bg-red-500": tag === "Astro",
+                            "bg-slate-500": tag === "SolidJS",
+                            "bg-indigo-500": tag === "TypeScript",
+                            "bg-gray-500": tag === "JavaScript",
+                            "bg-black-500": tag === "HTML",
+                            "bg-gray-700": tag === "CSS",
+                          },
+                        ]}
+                      >
+                        #{tag}
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
             </a>
@@ -65,30 +68,29 @@ import { proyects } from "@/consts/proyects";
   </div>
 </section>
 <style>
-.card {
-  @apply rounded-3xl border-4 border-transparent hover:border-white md:border-8 bg-zinc-800 p-3 shadow-lg duration-200 hover:scale-105 hover:transform hover:shadow-xl ;
-}
-.card:hover a > div img {
-  @apply scale-110
-}
-@media (max-width: 640px) {
   .card {
-    animation: fadeInCard linear both;
-    animation-timeline: view();
-    animation-range:entry 20% cover 40%;
+    @apply rounded-3xl border-4 border-transparent hover:border-white md:border-8 bg-zinc-800 p-3 shadow-lg duration-200 hover:scale-105 hover:transform hover:shadow-xl;
   }
-  
-}
-@keyframes fadeInCard {
-  from {
-    opacity: 0;
-    scale: 0.5;
-    translate: 0 400px;
+  .card:hover a > div img {
+    @apply scale-110;
   }
-  to {
-    opacity: 1;
-    scale: 1;
-    translate: 0;
+  @media (max-width: 640px) {
+    .card {
+      animation: fadeInCard linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 40%;
+    }
   }
-}
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      scale: 0.5;
+      translate: 0 400px;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+      translate: 0;
+    }
+  }
 </style>

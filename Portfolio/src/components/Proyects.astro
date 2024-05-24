@@ -20,10 +20,11 @@ import { proyects } from "@/consts/proyects";
                   <img
                     alt={item?.descripcion}
                     width="400"
+                    aspect-ratio="1"
                     height="400"
                     class="w-full h-full object-cover  aspect-square duration-200"
                     src={item?.img}
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
                   />
                 </a>

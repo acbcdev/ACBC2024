@@ -4,5 +4,5 @@ export type ProyectType = {
   img: string;
   name: string;
   tags: string[];
-  descripcion: string;
+  description: string;
 }

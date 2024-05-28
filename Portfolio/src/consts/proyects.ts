@@ -1,17 +1,17 @@
 import type { ProyectType } from "@/types/proyects";
 
-export const proyects: ProyectType[] = [
+export const projects: ProyectType[] = [
 
   {
-    descripcion: 'Un conjunto de Calculadores para Aprender Programacion',
+    description: 'A set of calculators for responsible financial management',
     github: 'https://github.com/ACBC-DEV/SmartMoney',
-    link: 'https://github.com/ACBC-DEV/SmartMoney',
+    link: 'https://smart-money-five.vercel.app/',
     img: '/img/smartmoney.avif',
     tags: ['Astro', 'SolidJS', 'Tailwindcss'],
     name: 'SmartMoney'
   },
   {
-    descripcion: 'un generador de shortLinks',
+    description: 'A short link generator',
     github: 'https://github.com/ACBC-DEV/LinkMinify',
     link: 'https://link-minify.vercel.app/',
     img: '/img/link-minify.avif',
@@ -19,7 +19,7 @@ export const proyects: ProyectType[] = [
     name: 'LinkMinify'
   },
   {
-    descripcion: 'un Buscador de Gifs con el cual ',
+    description: 'A search of gifs engine',
     github: 'https://github.com/ACBC-DEV/Gifty',
     link: 'https://github.com/ACBC-DEV/Gifty',
     img: '/img/gifty.avif',

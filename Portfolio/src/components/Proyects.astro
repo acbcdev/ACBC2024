@@ -34,24 +34,26 @@ import { projects } from "@/consts/proyects";
                 <p>{item?.description}</p>
                 <div class="mt-2 flex  gap-2 flex-wrap justify-start">
                   {item?.tags.map((tag: string) => {
+                    tag=tag.toLowerCase()
                     return (
                       <p
                         class:list={[
-                          " rounded-3xl hover:scale-105 duration-200 text-black py-3 px-2  ",
+                        " rounded-3xl hover:scale-105 duration-200 py-3 px-2  ",
                           {
+                            "text-zinc-200": tag !== "nextjs",
+                            "text-zinc-700": tag === "nextjs",
                             "bg-blue-500": [
-                              "React",
-                              "CSS",
-                              "Tailwindcss",
+                              "react",
+                              "css",
+                              "tailwindcss",
                             ].includes(tag),
-                            "bg-white": tag === "Nextjs",
-                            "bg-green-500": ["mongodb", "Node"].includes(tag),
-                            "bg-red-500": tag === "Astro",
-                            "bg-slate-500": tag === "SolidJS",
-                            "bg-indigo-500": tag === "TypeScript",
-                            "bg-gray-500": tag === "JavaScript",
-                            "bg-black-500": tag === "HTML",
-                            "bg-gray-700": tag === "CSS",
+                            "bg-green-500": ["mongodb", "node"].includes(tag),
+                            "bg-red-500": ["astro",'angular',].includes(tag),
+                            "bg-slate-500": tag === "solidjs",
+                            "bg-indigo-500": tag === "typscript",
+                            "bg-gray-500": tag === "javascript",
+                            "bg-black-500": tag === "html",
+                            "bg-white text-black" :['nextjs'].includes(tag),
                           },
                         ]}
                       >

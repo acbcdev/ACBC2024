@@ -1,8 +1,8 @@
-interface ImgType {
+interface skillType {
   src: string;
   name: string;
 }
-export const SkillsICons: ImgType[] = [
+export const SkillsICons: skillType[] = [
   { src: "/svg/file-type-html.svg", name: "html icon" },
   { src: "/svg/css.svg", name: "css icon" },
   { src: "/svg/javascript-js.svg", name: "javascript icon" },
@@ -12,5 +12,9 @@ export const SkillsICons: ImgType[] = [
   { src: "/svg/typescript-icon.svg", name: "typescript icon" },
   { src: "/svg/astro_dark.svg", name: "astro" },
   { src: "/svg/solidjs.svg", name: "solid-js" },
-  { src: "/svg/bash_dark.svg", name: "bash" }
+  { src: "/svg/bash_dark.svg", name: "bash" },
+  {
+    name: "Angular",
+    src: "/svg/angular.svg",
+  },
 ];

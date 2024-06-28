@@ -22,7 +22,7 @@ import { projects } from "@/consts/proyects";
                     width="400"
                     aspect-ratio="1"
                     height="400"
-                    class="w-full h-full object-cover  aspect-square duration-200"
+                    class="w-full img-s h-full object-cover  aspect-square duration-200"
                     src={item?.img}
                     loading="lazy"
                     decoding="async"
@@ -74,8 +74,9 @@ import { projects } from "@/consts/proyects";
   .card {
     @apply rounded-3xl border-4 border-transparent hover:border-white md:border-8 bg-zinc-800 p-3 shadow-lg duration-200 hover:scale-105 hover:transform hover:shadow-xl;
   }
-  .card:hover a > div img {
-    @apply scale-110;
+  .card:hover .img-s {
+    @apply scale-105;
+    
   }
   @media (max-width: 640px) {
     .card {

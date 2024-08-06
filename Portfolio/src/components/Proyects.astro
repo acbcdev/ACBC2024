@@ -34,26 +34,26 @@ import { projects } from "@/consts/proyects";
                 <p>{item?.description}</p>
                 <div class="mt-2 flex  gap-2 flex-wrap justify-start">
                   {item?.tags.map((tag: string) => {
-                    tag=tag.toLowerCase()
+                     const lowerTag =tag.toLowerCase()
                     return (
                       <p
                         class:list={[
                         " rounded-3xl hover:scale-105 duration-200 py-3 px-2  ",
                           {
-                            "text-zinc-200": tag !== "nextjs",
-                            "text-zinc-700": tag === "nextjs",
+                            "text-zinc-200": lowerTag !== "nextjs",
+                            "text-zinc-700": lowerTag === "nextjs",
                             "bg-blue-500": [
                               "react",
                               "css",
                               "tailwindcss",
-                            ].includes(tag),
-                            "bg-green-500": ["mongodb", "node"].includes(tag),
-                            "bg-red-500": ["astro",'angular',].includes(tag),
-                            "bg-slate-500": tag === "solidjs",
-                            "bg-indigo-500": tag === "typscript",
-                            "bg-gray-500": tag === "javascript",
-                            "bg-black-500": tag === "html",
-                            "bg-white text-black" :['nextjs'].includes(tag),
+                            ].includes(lowerTag),
+                            "bg-green-500": ["mongodb", "node"].includes(lowerTag),
+                            "bg-red-500": ["astro",'angular',].includes(lowerTag),
+                            "bg-slate-500": lowerTag === "solidjs",
+                            "bg-indigo-500": lowerTag === "typscript",
+                            "bg-gray-500": lowerTag === "javascript",
+                            "bg-black-500": lowerTag === "html",
+                            "bg-white text-black" :['nextjs'].includes(lowerTag),
                           },
                         ]}
                       >

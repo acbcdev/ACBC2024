@@ -14,7 +14,7 @@ export const projects: ProyectType[] = [
     github: 'https://github.com/ACBC-DEV/LinkMinify',
     link: 'https://link-minify.vercel.app/',
     img: '/img/link-minify.avif',
-    tags: ['Nextjs', 'Tailwindcss', 'mongodb',],
+    tags: ['Nextjs', 'Tailwindcss', 'Mongodb',],
     name: 'LinkMinify'
   },
   // {

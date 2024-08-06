@@ -1,15 +1,20 @@
 ---
 import "@fontsource-variable/chivo-mono";
 import Header from "../components/Header.astro";
+import SEO from "../components/SEO.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ACBC</title>
-    <link rel="icon" href="/favicon.avif" type="avif">
+    <link rel="icon" href="/favicon.avif" type="avif" />
+    <slot name="head" />
+    <SEO
+      description="Descubre el portafolio de Camilo Blandón (ACBC), un Frontend Developer creando experiencias web atractivas y funcionales. Explora proyectos innovadores"
+      title="ACBC - Frontend Developer | Portafolio Personal"
+    />
   </head>
   <body>
     <Header />
@@ -17,10 +22,10 @@ import Header from "../components/Header.astro";
   </body>
 </html>
 <style is:global>
-  :root{
+  :root {
     color-scheme: dark;
   }
-body {
+  body {
     font-family: "Chivo Mono Variable", monospace;
   }
   html {
@@ -28,7 +33,7 @@ body {
     background-color: #202020;
   }
 
-  .icon:hover{
+  .icon:hover {
     filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.2));
   }
 </style>

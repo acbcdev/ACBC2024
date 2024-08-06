@@ -14,7 +14,7 @@ import { projects } from "@/consts/proyects";
       projects.map((item: ProyectType) => (
         <section class=" w-full p-4 md:w-1/2 lg:w-1/3 text-white">
           <article data-testid="card" class="card">
-            <a aria-label="link to project">
+            <a aria-label={`link to ${item?.name}`}>
               <div class="relative flex items-end overflow-hidden rounded-xl">
                 <a target="_blank" href={item.link}>
                   <img
@@ -34,11 +34,11 @@ import { projects } from "@/consts/proyects";
                 <p>{item?.description}</p>
                 <div class="mt-2 flex  gap-2 flex-wrap justify-start">
                   {item?.tags.map((tag: string) => {
-                     const lowerTag =tag.toLowerCase()
+                    const lowerTag = tag.toLowerCase();
                     return (
                       <p
                         class:list={[
-                        " rounded-3xl hover:scale-105 duration-200 py-3 px-2  ",
+                          " rounded-3xl hover:scale-105 duration-200 py-3 px-2  ",
                           {
                             "text-zinc-200": lowerTag !== "nextjs",
                             "text-zinc-700": lowerTag === "nextjs",
@@ -47,13 +47,19 @@ import { projects } from "@/consts/proyects";
                               "css",
                               "tailwindcss",
                             ].includes(lowerTag),
-                            "bg-green-500": ["mongodb", "node"].includes(lowerTag),
-                            "bg-red-500": ["astro",'angular',].includes(lowerTag),
+                            "bg-green-500": ["mongodb", "node"].includes(
+                              lowerTag,
+                            ),
+                            "bg-red-500": ["astro", "angular"].includes(
+                              lowerTag,
+                            ),
                             "bg-slate-500": lowerTag === "solidjs",
                             "bg-indigo-500": lowerTag === "typscript",
                             "bg-gray-500": lowerTag === "javascript",
                             "bg-black-500": lowerTag === "html",
-                            "bg-white text-black" :['nextjs'].includes(lowerTag),
+                            "bg-white text-black": ["nextjs"].includes(
+                              lowerTag,
+                            ),
                           },
                         ]}
                       >
@@ -76,7 +82,6 @@ import { projects } from "@/consts/proyects";
   }
   .card:hover .img-s {
     @apply scale-105;
-    
   }
   @media (max-width: 640px) {
     .card {

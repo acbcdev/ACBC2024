@@ -55,4 +55,12 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+<!-- This meta tag tells Google to index and follow the links on your site. -->
 <meta name="googlebot" content="index, follow" />
+
+<!-- This meta tag is used to verify ownership of your site. You can get the verification code from Google Search Console. 
+    It helps Google to recognize your site and improve its search results. -->
+<meta
+  name="google-site-verification"
+  content="_8tgZssrC4YCXssdqAnw1bEGNb8alDvaOa0cQCAWkXc"
+/>

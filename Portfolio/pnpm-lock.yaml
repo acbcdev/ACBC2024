@@ -14,6 +14,9 @@ importers:
       '@fontsource-variable/chivo-mono':
         specifier: ^5.0.20
         version: 5.0.21
+      '@github/typing-effect-element':
+        specifier: ^0.1.0
+        version: 0.1.0
       '@vercel/speed-insights':
         specifier: ^1.0.12
         version: 1.0.12(react@18.3.1)
@@ -445,6 +448,9 @@ packages:
 
   '@fontsource-variable/chivo-mono@5.0.21':
     resolution: {integrity: sha512-GSb0Df7EEwIWaaNG8KclPh0p7xxvjppbfXMw3bdZ+ILsMMqmaQfyG9eQhKycj9UKve6DulPp1bxrcd8zfffz7A==}
+
+  '@github/typing-effect-element@0.1.0':
+    resolution: {integrity: sha512-aIAJmnzZ49evO2G5xNNbxypJRV1wir03UyY5mqemjZQMdQW2DGKKn2fjwRLgGNnYlziumd5m3q31hzmY1FmPmw==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2437,6 +2443,8 @@ snapshots:
     optional: true
 
   '@fontsource-variable/chivo-mono@5.0.21': {}
+
+  '@github/typing-effect-element@0.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:

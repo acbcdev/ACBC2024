@@ -3,6 +3,9 @@ import GitHubSVG from "@svg/github.astro"; //'@svg/github.astro'
 import LinkedinSVG from "@svg/linkedin.astro";
 ---
 
+<script>
+  import "@github/typing-effect-element";
+</script>
 <section
   class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
 >
@@ -10,7 +13,12 @@ import LinkedinSVG from "@svg/linkedin.astro";
     <h1 class="text-white text-6xl mt-10 text-center xl:text-9xl">
       Camilo Blandon
     </h1>
-    <h2 class="text-white text-2xl text-center">Frontend Developer</h2>
+    <h2 class="text-white text-2xl text-center">
+      <typing-effect data-lines='["Frontend Developer"]'>
+        <span data-target="typing-effect.content"></span>
+        <span data-target="typing-effect.cursor" class="font-bold">|</span>
+      </typing-effect>
+    </h2>
 
     <div class="grid place-content-center grid-flow-col gap-4 p-5">
       <a

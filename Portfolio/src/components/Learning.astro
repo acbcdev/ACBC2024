@@ -1,24 +1,23 @@
 ---
-
 type TLearning = {
-	name: string;
-	src: string;
+  name: string;
+  src: string;
 };
 const currentLearning: TLearning[] = [
-	{
-		name: "express",
-		src: "/svg/expressjs.svg",
-	},
-	{
-		name: "nodejs",
-		src: "/svg/nodejs.svg",
-	},
+  {
+    name: "express",
+    src: "/svg/expressjs.svg",
+  },
+  {
+    name: "nodejs",
+    src: "/svg/nodejs.svg",
+  },
 ];
 ---
 
-<section id="learning" class="grid place-content-center h-64 my-40">
+<section id="learning" class="grid place-content-center h-64 my-40 induvidual">
   <div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-3">
-    <h2 class="text-5xl text-center text-white  mb-2">Current Learning</h2>
+    <h2 class="text-5xl text-center text-white mb-2">Current Learning</h2>
     <span class="mb-6 ml-2 h-1 w-10 bg-white"></span>
   </div>
 
@@ -29,7 +28,7 @@ const currentLearning: TLearning[] = [
           <img
             src={img.src}
             alt={img.name}
-            class="icon w-32 md:w-40 aspect-square  lg:w-52 hover:scale-110 duration-300 "
+            class="icon w-32 md:w-40 aspect-square  lg:w-52 hover:scale-110 duration-300 item"
           />
         ))
       }

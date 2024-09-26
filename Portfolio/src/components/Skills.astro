@@ -2,20 +2,25 @@
 import { SkillsICons } from "@/consts/skills";
 ---
 
-<section id="skills" class="mb-10 grid place-content-center h-screen">
+<section
+  id="skills"
+  class="mb-10 grid place-content-center h-screen induvidual"
+>
   <div class="mb-5 flex w-full flex-col items-center justify-center lg:mb-3">
     <h2 class="text-5xl text-white mb-2">Skills</h2>
     <span class="mb-6 ml-2 h-1 w-10 bg-white"></span>
   </div>
 
   <div class="flex items-center justify-center">
-    <div class="flex flex-wrap gap-8 items-center justify-center lg:mx-40 xl:mx-72 ">
+    <div
+      class="flex flex-wrap gap-8 items-center justify-center lg:mx-40 xl:mx-72"
+    >
       {
         SkillsICons.map((img) => (
           <img
             src={img.src}
             alt={img.name}
-            class="icon w-20 md:w-28 aspect-square lg:w-36  hover:scale-110 duration-300 "
+            class="icon w-20 md:w-28 aspect-square lg:w-36  hover:scale-110 duration-300 item"
           />
         ))
       }

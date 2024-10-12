@@ -4,7 +4,7 @@ export const projects: ProyectType[] = [
 	{
 		description: "A short link generator",
 		github: "https://github.com/ACBC-DEV/LinkMinify",
-		link: "https://link-minify.vercel.app/",
+		link: "https://link.acbc.dev/",
 		img: "/img/link.webp",
 		tags: ["Nextjs", "Tailwindcss", "Mongodb"],
 		name: "LinkMinify",
@@ -12,7 +12,7 @@ export const projects: ProyectType[] = [
 	{
 		name: "Trello Clone",
 		github: "https://github.com/ACBC-DEV/trello-clone",
-		link: "https://trello-clone-tau-eight.vercel.app/",
+		link: "https://trello.acbc.dev/",
 		img: "/img/trello.webp",
 		tags: ["Angular", "Tailwindcss"],
 		description: "Trello Clone with Angular ",

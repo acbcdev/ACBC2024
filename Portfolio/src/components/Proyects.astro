@@ -5,11 +5,11 @@ import { projects } from "@/consts/proyects";
 
 <section
   id="projects"
-  class="mb-28 flex flex-col items-center justify-center md:mb-0 md:h-screen induvidual"
+  class="mb-28 flex flex-col items-center justify-center md:mb-0 md:h-screen"
 >
-  <div>
+  <div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-3">
     <h2 class="font-monospace text-5xl mb-2 text-white">Projects</h2>
-    <span class="mb-10 h-1 w-10 bg-white"></span>
+    <span class="mb-6 ml-2 h-1 w-10 bg-white"></span>
   </div>
 
   <div class="mb-10 flex w-full flex-col items-center md:flex-row">
@@ -26,10 +26,9 @@ import { projects } from "@/consts/proyects";
                 >
                   <img
                     alt={item?.name}
-                    width="400"
-                    aspect-ratio="1"
-                    height="400"
-                    class="w-full img-s h-full object-cover  aspect-square duration-200"
+                    width="960"
+                    height="720"
+                    class="img-s  object-fill   duration-200"
                     src={item?.img}
                     loading="lazy"
                     decoding="async"

@@ -3,6 +3,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://acbc.vercel.app/",
-	integrations: [tailwind()],
+  site: "https://acbc.dev:",
+  integrations: [tailwind()],
 });

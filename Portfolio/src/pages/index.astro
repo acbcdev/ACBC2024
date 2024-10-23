@@ -1,19 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Main from "../components/Main.astro";
-import About from "../components/About.astro";
-import Skills from "../components/Skills.astro";
-import Proyects from "../components/Proyects.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/components/Main.astro";
+import About from "@/components/About.astro";
+import Skills from "@/components/Skills.astro";
+import Proyects from "@/components/Proyects.astro";
+import Footer from "@/components/Footer.astro";
 import Learning from "@/components/Learning.astro";
 ---
 
 <Layout>
   <Main />
   <div class="scroll">
+    <Proyects />
     <About />
     <Skills />
-    <Proyects />
     <Learning />
   </div>
   <Footer />
@@ -28,7 +28,7 @@ import Learning from "@/components/Learning.astro";
   .scroll > .induvidual div:nth-child(2) .item {
     animation: fadeIn linear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 45%;
+    animation-range: entry 20% cover 40%;
   }
   @keyframes fadeIn {
     from {

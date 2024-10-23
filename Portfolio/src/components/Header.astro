@@ -1,25 +1,25 @@
 ---
 type HeaderType = { text: string; id: string };
 const headerList: HeaderType[] = [
-	{ text: "About", id: "about" },
-	{ text: "Skills", id: "skills" },
-	{ text: "Projects", id: "projects" },
-	{ text: "Learning", id: "learning" },
+  { text: "About", id: "about" },
+  { text: "Skills", id: "skills" },
+  { text: "Projects", id: "projects" },
+  { text: "Learning", id: "learning" },
 ];
 ---
+
 <nav class="my-3">
-  <div class="flex flex-1 items-center justify-center  ">
-    <div class="mx-auto">
-      {headerList.map((item) => (
-        <a href={`#${item.id}`}>
-          <button
-            type="button"
-            class="text-xs md:text-2xl px-2 py-1 rounded-3xl transition duration-300 hover:scale-110 hover:outline hover:outline-4 "
-          >
-            {item.text}
-          </button>
+  <div class="flex items-center justify-center gap-x-2">
+    {
+      headerList.map((item, index) => (
+        <a
+          href={`#${item.id}`}
+          class=" md:text-2xl px-2 py-1 rounded-3xl transition duration-300 hover:scale-110 hover:outline hover:outline-4 "
+          tabindex="0"
+        >
+          {item.text}
         </a>
-      ))}
-    </div>
+      ))
+    }
   </div>
 </nav>

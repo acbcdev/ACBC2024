@@ -71,33 +71,28 @@
     &:hover {
       transition-duration: 0.3s;
       scale: 1.2;
-      & .icon {
-        opacity: 0.9;
-      }
-
-      & button {
+      button {
         transition-duration: 0.2s;
       }
     }
 
-    & button {
+    button {
       background-color: transparent;
       border: 3px solid #fff;
       width: 3.5rem;
       height: 3.5rem;
-      border-radius: 50%;
+      border-radius: 3rem;
       display: grid;
       place-items: center;
-    }
-
-    & .icon {
-      width: 2.7rem;
-      height: 2.7rem;
-      stroke: #fff;
-      transition-duration: 0.3s;
-      padding: 0.5rem;
-      transform: rotate(-135deg);
-      &:hover {
+      .icon {
+        width: 2.7rem;
+        height: 2.7rem;
+        stroke: #fff;
+        transition-duration: 0.3s;
+        padding: 0.5rem;
+        transform: rotate(-135deg);
+      }
+      &:hover .icon {
         transform: rotate(-90deg);
       }
     }

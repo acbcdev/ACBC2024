@@ -3,6 +3,13 @@ import "@fontsource-variable/chivo-mono";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import SEO from "@/components/SEO.astro";
 import ButtonUp from "@/components/ui/ButtonUp.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,14 +18,10 @@ import ButtonUp from "@/components/ui/ButtonUp.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <slot name="head" />
-    <SEO
-      description="Descubre el portafolio de Camilo Blandón (ACBC), un Frontend Developer creando experiencias web atractivas y funcionales. Explora proyectos innovadores"
-      title="ACBC - Frontend Developer | Portafolio Personal"
-    />
+    <SEO description={description} title={title} />
   </head>
   <body>
     <SpeedInsights />
-
     <slot />
     <ButtonUp />
   </body>

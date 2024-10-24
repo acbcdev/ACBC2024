@@ -1,4 +1,18 @@
 ---
-export const prerender = false;
-return Astro.redirect("/");
+import Layout from "@/layouts/Layout.astro";
 ---
+
+<Layout>
+  <main class="h-screen w-full grid place-content-center px-4">
+    <div class="grid gap-y-2">
+      <h1 class="text-5xl md:text-9xl font-bold">404 - Not Found</h1>
+      <p class="font-medium">The page you are looking for does not exist.</p>
+      <a
+        href="/"
+        class="p-1 font-light w-fit underline duration-200 hover:text-blue-500"
+        >Go home</a
+      >
+    </div>
+    <!-- <NotFound /> -->
+  </main>
+</Layout>

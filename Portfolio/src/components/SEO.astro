@@ -1,5 +1,6 @@
 ---
 import ChivoMonoWoff2 from "@fontsource-variable/chivo-mono/files/chivo-mono-latin-wght-normal.woff2";
+import StructurData from "./StructurData.astro";
 
 interface Props {
   title: string;
@@ -24,9 +25,10 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
 <link rel="icon" type="svg" href="/favicon.svg" />
 <meta
   name="keywords"
-  content="Camilo Blandon ACBC Frontend Developer Portafolio Andres Camilo Blandon Contreras Dev"
+  content="Camilo Blandon, frontend developer, web developer portfolio, ACBC, React developer, web development"
 />
-<meta name="theme-color" content="#333" />
+
+<meta name="theme-color" content="#202020" />
 <!-- <meta name="generator" content={Astro.generator} /> -->
 
 <!-- Font preloads -->
@@ -72,3 +74,5 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
   name="google-site-verification"
   content="_8tgZssrC4YCXssdqAnw1bEGNb8alDvaOa0cQCAWkXc"
 />
+<!-- Estructured Data -->
+<StructurData title={title} />

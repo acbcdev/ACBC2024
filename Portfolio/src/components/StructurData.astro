@@ -1,0 +1,55 @@
+---
+import { SkillsICons } from "@/consts/skills";
+const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+const { title } = Astro.props;
+
+// Datos estructurados de BreadcrumbList (migas de pan)
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://acbc.dev/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Projects",
+      item: "https://acbc.dev/#projects",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Skills",
+      item: "https://acbc.dev/#skills",
+    },
+  ],
+};
+
+// Datos estructurados de la persona
+const personData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: title,
+  jobTitle: "Frontend Developer",
+  url: pageUrl, // URL de la página actual
+  knowsAbout: [...SkillsICons.map((img) => img.name), "Web Development"],
+  sameAs: [
+    "https://www.linkedin.com/in/acbc-dev/",
+    "https://x.com/acbcdotdev",
+    "https://github.com/ACBC-DEV",
+  ],
+  alumniOf: "Platzi",
+  inLanguage: "en",
+};
+---
+
+<!-- JSON-LD para Person -->
+<script type="application/ld+json" set:html={JSON.stringify(personData)} />
+
+<!-- JSON-LD para BreadcrumbList -->
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />

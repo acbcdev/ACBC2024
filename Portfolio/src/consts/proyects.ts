@@ -3,7 +3,7 @@ import type { ProyectType } from "@/types/proyects";
 export const projects: ProyectType[] = [
 	{
 		link: "https://runts.acbc.dev/",
-		github: "https://github.com/ACBC-DEV/RunTS",
+		github: "https://github.com/acbcdev/RunTS",
 		img: "/img/runts.webp",
 		tags: ["React", "Playground", "WebWorker"],
 		name: "RunTS",
@@ -14,7 +14,7 @@ export const projects: ProyectType[] = [
 	{
 		name: "Spooky Histories",
 		link: "https://hackthon-cloudinary.acbc.dev/",
-		github: "https://github.com/ACBC-DEV/hackthon-cloudinary",
+		github: "https://github.com/acbcdev/hackthon-cloudinary",
 		img: "/img/spooky.webp",
 		tags: ["Nextjs", "Tailwindcss", "Cloudinary"],
 		description:
@@ -24,7 +24,7 @@ export const projects: ProyectType[] = [
 
 	{
 		name: "Trello Clone",
-		github: "https://github.com/ACBC-DEV/trello-clone",
+		github: "https://github.com/acbcdev/trello-clone",
 		link: "https://trello.acbc.dev/",
 		img: "/img/trello.webp",
 		tags: ["Angular", "Tailwindcss"],
@@ -35,7 +35,7 @@ export const projects: ProyectType[] = [
 	{
 		description:
 			"🔗 Short Link URL Generator: 🚀 Create Compact and Shareable Links Effortlessly ✂️",
-		github: "https://github.com/ACBC-DEV/LinkMinify",
+		github: "https://github.com/acbcdev/LinkMinify",
 		link: "https://link.acbc.dev/",
 		img: "/img/link.webp",
 		tags: ["Nextjs", "Tailwindcss", "Mongodb"],
@@ -45,7 +45,7 @@ export const projects: ProyectType[] = [
 	{
 		description:
 			"📊 A Set of Financial Calculators: 🧮 Loan Payments, Investment Growth 📈, Savings Tracking 💰, Budget Planning 📝, ROI Calculation 🚀, and Tax Management 💵 ",
-		github: "https://github.com/ACBC-DEV/SmartMoney",
+		github: "https://github.com/acbcdev/SmartMoney",
 		link: "https://smart-money-five.vercel.app/",
 		img: "/img/smart.webp",
 		tags: ["Astro", "SolidJS", "Tailwindcss"],

@@ -1,10 +1,9 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/static";
-// https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
 	site: "https://acbc.dev:",
-	output: "static",
+	output: "server",
 	integrations: [
 		tailwind({
 			nesting: true,

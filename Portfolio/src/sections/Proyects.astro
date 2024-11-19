@@ -56,7 +56,11 @@ import GithubSVG from "@/svg/github.astro";
                 {item?.description}
               </p>
               <div class="mt-2 flex  gap-2 flex-wrap items-center justify-start">
-                <img src={item.iconTecnology} class="size-10 " alt="github" />
+                <img
+                  src={item.iconTecnology}
+                  class=" size-5 md:size-10 "
+                  alt="github"
+                />
                 {item?.tags.map((tag: string) => {
                   const lowerTag = tag.toLowerCase();
                   return <p class="text-gray-400">#{tag}</p>;

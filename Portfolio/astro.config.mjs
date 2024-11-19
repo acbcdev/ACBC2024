@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
 	site: "https://acbc.dev:",
-	output: "server",
+	output: "hybrid",
 	integrations: [
 		tailwind({
 			nesting: true,

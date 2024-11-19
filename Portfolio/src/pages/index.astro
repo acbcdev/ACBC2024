@@ -7,6 +7,7 @@ import Proyects from "@/components/Proyects.astro";
 import Footer from "@/components/Footer.astro";
 import Learning from "@/components/Learning.astro";
 import Header from "@/components/Header.astro";
+export const prerender = true;
 ---
 
 <Layout
@@ -33,7 +34,7 @@ import Header from "@/components/Header.astro";
   .scroll > .induvidual div:nth-child(2) .item {
     animation: fadeIn linear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 40%;
+    animation-range: entry 30% cover 40%;
   }
   @keyframes fadeIn {
     from {

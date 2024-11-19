@@ -1,0 +1,97 @@
+---
+import type { ProyectType } from "@/types/proyects";
+import { projects } from "@/consts/proyects";
+import { Image } from "astro:assets";
+import LinkSVG from "@/svg/link.astro";
+import GithubSVG from "@/svg/github.astro";
+---
+
+<section id="projects" class="mb-28 flex flex-col">
+  <div class="mb-10 flex w-full flex-col items-center justify-center lg:mb-3">
+    <h2 class="font-monospace text-5xl mb-2 text-white">Projects</h2>
+    <span class="mb-6 ml-2 h-1 w-10 bg-white"></span>
+  </div>
+
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 w-[80%] mx-auto">
+    {
+      projects.map((item) => (
+        <section class=" p-4 item group/proyect ">
+          <article class="card">
+            <div class="relative flex items-end overflow-hidden rounded-xl">
+              <a
+                aria-label={`link to ${item?.name}`}
+                target="_blank"
+                tabindex="0"
+                class="focus:border-2"
+                href={item.link}
+              >
+                <Image
+                  alt={item?.name}
+                  width="960"
+                  height="720"
+                  class="img-s  object-fill   duration-200 "
+                  src={item?.img}
+                />
+              </a>
+            </div>
+            <div class="mt-1 p-2">
+              <div class="flex items-center justify-start gap-x-2 ">
+                <h3 class="text-xl text-orange lg:text-2xl">{item?.name}</h3>
+                <a
+                  href={item.link}
+                  class="-translate-x-20 duration-300 opacity-0 hover:cursor-pointer group-hover/proyect:translate-x-0 group-hover/proyect:opacity-100 "
+                >
+                  <LinkSVG class="size-6   text-zinc-300 hover:text-white  duration-300" />
+                </a>
+                <a
+                  href={item.github}
+                  class="-translate-x-20 duration-300 opacity-0 hover:cursor-pointer group-hover/proyect:translate-x-0 group-hover/proyect:opacity-100"
+                >
+                  <GithubSVG class="size-5 text-zinc-300 hover:text-white duration-300" />
+                </a>
+              </div>
+              <p class="text-gray-300">{item?.description}</p>
+              <div class="mt-2 flex  gap-2 flex-wrap items-center justify-start">
+                <img src={item.iconTecnology} class="size-10 " alt="github" />
+                {item?.tags.map((tag: string) => {
+                  const lowerTag = tag.toLowerCase();
+                  return <p class="text-gray-400">#{tag}</p>;
+                })}
+              </div>
+            </div>
+          </article>
+        </section>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .card {
+    @apply rounded-3xl border-4 border-transparent hover:border-white md:border-8 bg-zinc-800 p-3 shadow-lg duration-200 hover:scale-105 hover:transform hover:shadow-xl;
+  }
+  .card:hover .img-s {
+    @apply scale-105;
+  }
+
+  .card {
+    animation: fadeInCard linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+  .bento {
+    display: grid;
+  }
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      scale: 0.5;
+      translate: 0 300px;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+      translate: 0;
+    }
+  }
+</style>

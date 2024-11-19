@@ -8,7 +8,6 @@ interface Props {
   title: string;
   description: string;
 }
-
 const { title, description } = Astro.props;
 ---
 
@@ -19,10 +18,10 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <slot name="head" />
     <SEO description={description} title={title} />
+    <Analytics />
   </head>
   <body>
     <SpeedInsights />
-    <Analytics />
     <ButtonUp />
   </body>
 </html>

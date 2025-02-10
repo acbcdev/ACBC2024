@@ -1,5 +1,5 @@
 ---
-type HeaderType = { text: string; id: string };
+type HeaderType = { text: string; id: string; link?: string };
 const headerList: HeaderType[] = [
   { text: "About", id: "about" },
   { text: "Skills", id: "skills" },
@@ -11,15 +11,19 @@ const headerList: HeaderType[] = [
 <nav class="my-3">
   <div class="flex items-center justify-center gap-x-2">
     {
-      headerList.map((item, index) => (
+      headerList.map((item) => (
         <a
           href={`#${item.id}`}
           class=" md:text-2xl px-2 py-1 rounded-3xl transition duration-300 hover:scale-110 hover:outline hover:outline-4 "
-          tabindex="0"
         >
           {item.text}
         </a>
       ))
     }
+    <a
+      href="https://acbc.dev"
+      class="md:text-2xl px-2 py-1 rounded-3xl transition duration-300 underline"
+      >New Web</a
+    >
   </div>
 </nav>

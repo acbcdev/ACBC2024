@@ -5,7 +5,7 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const { title } = Astro.props;
 
 // Datos estructurados de BreadcrumbList (migas de pan)
-const breadcrumbData = {
+/*const breadcrumbData = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
@@ -28,7 +28,7 @@ const breadcrumbData = {
       item: "https://acbc.dev/#skills",
     },
   ],
-};
+};*/
 
 // Datos estructurados de la persona
 const personData = {
@@ -51,5 +51,4 @@ const personData = {
 <!-- JSON-LD para Person -->
 <script type="application/ld+json" set:html={JSON.stringify(personData)} />
 
-<!-- JSON-LD para BreadcrumbList -->
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+<!-- JSON-LD para BreadcrumbList --><!-- <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} /> -->
